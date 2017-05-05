@@ -177,6 +177,10 @@ def perfect_fourth(note):
     frt = fourth(note[0], 'C')
     return augment_or_diminish_until_the_interval_is_right(note, frt, 5)
 
+def augmented_fourth(note):
+    frt = fourth(note[0], 'C')
+    return augment_or_diminish_until_the_interval_is_right(note, frt, 6)
+
 def diminished_fifth(note):
     fif = fifth(note[0], 'C')
     return augment_or_diminish_until_the_interval_is_right(note, fif, 6)
@@ -185,12 +189,24 @@ def perfect_fifth(note):
     fif = fifth(note[0], 'C')
     return augment_or_diminish_until_the_interval_is_right(note, fif, 7)
 
+def augmented_fifth(note):
+    fif = fifth(note[0], 'C')
+    return augment_or_diminish_until_the_interval_is_right(note, fif, 8)
+
 def minor_sixth(note):
     sth = sixth(note[0], 'C')
     return augment_or_diminish_until_the_interval_is_right(note, sth, 8)
 
 def major_sixth(note):
     sth = sixth(note[0], 'C')
+    return augment_or_diminish_until_the_interval_is_right(note, sth, 9)
+
+def augmented_sixth(note):
+    sth = sixth(note[0], 'C')
+    return augment_or_diminish_until_the_interval_is_right(note, sth, 10)
+
+def diminished_seventh(note):
+    sth = seventh(note[0], 'C')
     return augment_or_diminish_until_the_interval_is_right(note, sth, 9)
 
 def minor_seventh(note):
