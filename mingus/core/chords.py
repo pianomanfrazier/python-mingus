@@ -521,6 +521,34 @@ def hendrix_chord(note):
     """
     return dominant_seventh(note) + [intervals.minor_third(note)]
 
+def italian_augmented_sixth_chord(note):
+    """Build an italian augmented sixth chord.
+
+    Example:
+    >>> italian_augmented_sixth_chord('C')
+    ['C', 'E', 'A#']
+    """
+    return [note, intervals.major_third(note), intervals.augmented_sixth(note)]
+
+def german_augmented_sixth_chord(note):
+    """Build an german augmented sixth chord.
+
+    Example:
+    >>> german_augmented_sixth_chord('C')
+    ['C', 'E', 'G', 'A#']
+    """
+    return major_triad(note) + [intervals.augmented_sixth(note)]
+
+def french_augmented_sixth_chord(note):
+    """Build an french augmented sixth chord.
+
+    Example:
+    >>> french_augmented_sixth_chord('C')
+    ['C', 'E', 'F#', 'A#']
+    """
+    return [note, intervals.major_third(note), intervals.augmented_fourth(note), intervals.augmented_sixth(note)]
+
+
 def tonic(key):
     """Return the tonic chord in key.
 
