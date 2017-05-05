@@ -8,6 +8,10 @@ and researchers to make and analyse music.
 
 ## TODO:
 
+- update transpose
+  - NoteContainer('A').transpose('m6')
+    - right now it allows 'b6' or '#b' which is just dumb
+    - it should take an interval object or something, or 'm6' 'M6' 'aug5'
 - update unit tests for intervals
   - diminished fourth
   - augmented fifth
