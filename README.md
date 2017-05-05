@@ -10,8 +10,10 @@ and researchers to make and analyse music.
 
 - update transpose
   - NoteContainer('A').transpose('m6')
-    - right now it allows 'b6' or '#b' which is just dumb
-    - it should take an interval object or something, or 'm6' 'M6' 'aug5'
+    - right now it allows 'b6' or '#7' which is just dumb
+    - it should take 'm6', 'M6', 'aug5', '+4', ...
+  - fix related unit tests
+  - the wierd shorthand should not be exposed to the user
 - update unit tests for intervals
   - diminished fourth
   - augmented fifth
