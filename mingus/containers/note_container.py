@@ -276,6 +276,7 @@ class NoteContainer(object):
     def transpose(self, interval, up=True):
         """Transpose all the notes in the container up or down the given
         interval.
+        Valid intervals are: m2,m3,...,P4,+4,aug4,dim5,...
         
         Examples:
         >>> aChord = NoteContainer(['A', 'C#', 'E'])
