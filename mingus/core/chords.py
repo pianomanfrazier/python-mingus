@@ -219,7 +219,7 @@ def augmented_triad(note):
     ['C', 'E', 'G#']
     """
     return [note, intervals.major_third(note),
-            notes.augment(intervals.major_fifth(note))]
+            notes.augment(intervals.perfect_fifth(note))]
 
 def seventh(note, key):
     """Return the seventh chord on note in key.

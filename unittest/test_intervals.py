@@ -178,7 +178,7 @@ class test_intervals(unittest.TestCase):
                              'The minor fifth of %s is not %s, expecting %s'
                               % (x, intervals.minor_fifth(x), minors[x]))
 
-    def test_major_fifth(self):
+    def test_perfect_fifth(self):
         majors = {
             'C': 'G',
             'Cb': 'Gb',
@@ -192,9 +192,9 @@ class test_intervals(unittest.TestCase):
             'Fb': 'Cb',
             }
         for x in majors.keys():
-            self.assertEqual(majors[x], intervals.major_fifth(x),
+            self.assertEqual(majors[x], intervals.perfect_fifth(x),
                              'The major fifth of %s is not %s, expecting %s'
-                              % (x, intervals.major_fifth(x), majors[x]))
+                              % (x, intervals.perfect_fifth(x), majors[x]))
 
     def test_minor_sixths(self):
         minors = {

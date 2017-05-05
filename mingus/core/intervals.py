@@ -181,12 +181,13 @@ def minor_fifth(note):
     fif = fifth(note[0], 'C')
     return augment_or_diminish_until_the_interval_is_right(note, fif, 6)
 
-def major_fifth(note):
+def perfect_fifth(note):
     fif = fifth(note[0], 'C')
     return augment_or_diminish_until_the_interval_is_right(note, fif, 7)
 
-def perfect_fifth(note):
-    return major_fifth(note)
+def major_fifth(note):
+    fif = fifth(note[0], 'C')
+    return augment_or_diminish_until_the_interval_is_right(note, fif, 7)
 
 def minor_sixth(note):
     sth = sixth(note[0], 'C')
