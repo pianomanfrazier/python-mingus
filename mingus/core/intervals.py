@@ -169,7 +169,7 @@ def major_third(note):
     trd = third(note[0], 'C')
     return augment_or_diminish_until_the_interval_is_right(note, trd, 4)
 
-def minor_fourth(note):
+def diminished_fourth(note):
     frt = fourth(note[0], 'C')
     return augment_or_diminish_until_the_interval_is_right(note, frt, 4)
 

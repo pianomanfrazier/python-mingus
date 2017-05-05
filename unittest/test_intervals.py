@@ -126,7 +126,7 @@ class test_intervals(unittest.TestCase):
                              'The major third of %s is not %s, expecting %s'
                               % (x, intervals.major_third(x), majors[x]))
 
-    def test_minor_fourth(self):
+    def test_diminished_fourth(self):
         minors = {
             'C': 'Fb',
             'Cb': 'Fbb',
@@ -139,9 +139,9 @@ class test_intervals(unittest.TestCase):
             'F##': 'B',
             }
         for x in minors.keys():
-            self.assertEqual(minors[x], intervals.minor_fourth(x),
+            self.assertEqual(minors[x], intervals.diminished_fourth(x),
                              'The minor fourth of %s is not %s, expecting %s'
-                              % (x, intervals.minor_fourth(x), minors[x]))
+                              % (x, intervals.diminished_fourth(x), minors[x]))
 
     def test_perfect_fourth(self):
         majors = {
