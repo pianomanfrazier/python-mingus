@@ -173,12 +173,9 @@ def minor_fourth(note):
     frt = fourth(note[0], 'C')
     return augment_or_diminish_until_the_interval_is_right(note, frt, 4)
 
-def major_fourth(note):
+def perfect_fourth(note):
     frt = fourth(note[0], 'C')
     return augment_or_diminish_until_the_interval_is_right(note, frt, 5)
-
-def perfect_fourth(note):
-    return major_fourth(note)
 
 def minor_fifth(note):
     fif = fifth(note[0], 'C')
@@ -427,8 +424,8 @@ def from_shorthand(note, interval, up=True):
         ['1', major_unison, major_unison],
         ['2', major_second, minor_seventh],
         ['3', major_third, minor_sixth],
-        ['4', major_fourth, major_fifth],
-        ['5', major_fifth, major_fourth],
+        ['4', perfect_fourth, perfect_fifth],
+        ['5', perfect_fifth, perfect_fourth],
         ['6', major_sixth, minor_third],
         ['7', major_seventh, minor_second],
         ]
