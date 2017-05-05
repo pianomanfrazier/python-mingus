@@ -140,7 +140,7 @@ class test_intervals(unittest.TestCase):
             }
         for x in minors.keys():
             self.assertEqual(minors[x], intervals.diminished_fourth(x),
-                             'The minor fourth of %s is not %s, expecting %s'
+                             'The diminished fourth of %s is not %s, expecting %s'
                               % (x, intervals.diminished_fourth(x), minors[x]))
 
     def test_perfect_fourth(self):
@@ -193,7 +193,7 @@ class test_intervals(unittest.TestCase):
             }
         for x in majors.keys():
             self.assertEqual(majors[x], intervals.perfect_fifth(x),
-                             'The major fifth of %s is not %s, expecting %s'
+                             'The perfect fifth of %s is not %s, expecting %s'
                               % (x, intervals.perfect_fifth(x), majors[x]))
 
     def test_minor_sixths(self):
