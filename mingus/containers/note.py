@@ -131,15 +131,15 @@ class Note(object):
 
         Examples:
         >>> a = Note('A')
-        >>> a.transpose('3')
+        >>> a.transpose('M3')
         >>> a
         'C#-5'
-        >>> a.transpose('3', False)
+        >>> a.transpose('M3', up=False)
         >>> a
-        'A-4'
+        'F-4'
         """
         (old, o_octave) = (self.name, self.octave)
-        self.name = intervals.from_shorthand(self.name, interval, up)
+        self.name = intervals.from_interval(self.name, interval, up)
         if up:
             if self < Note(old, o_octave):
                 self.octave += 1

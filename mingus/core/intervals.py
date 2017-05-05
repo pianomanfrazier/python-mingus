@@ -417,6 +417,50 @@ def determine(note1, note2, shorthand=False):
             return 'diminished ' + current[0]
         return 'b' * (maj - half_notes) + current[1]
 
+def from_interval(note, interval, up=True):
+    """Return the note on interval up or down.
+    Valid intervals are: m2, M2,...,P4, aug4, dim5
+
+    Examples:
+    >>> from_interval('A', 'm3')
+    'C'
+    >>> from_interval('D', 'M2')
+    'E'
+    >>> from_interval('E', 'M2', False)
+    'D'
+    """
+    # warning should be a valid note.
+    if not notes.is_valid_note(note):
+        return False
+    #{ key : [interval_function_up, interval_function_down]}
+    shorthand_lookup = {
+        'm2'  : (minor_second, major_seventh),
+        'M2'  : (major_second, minor_seventh),
+        'm3'  : (minor_third, major_sixth),
+        'M3'  : (major_third, minor_sixth),
+        'P4'  : (perfect_fourth, perfect_fifth),
+        'aug4': (augmented_fourth, augmented_fifth),
+        '+4'  : (augmented_fourth, augmented_fifth),
+        'dim5': (diminished_fifth, diminished_fourth),
+        'P5'  : (perfect_fifth, perfect_fourth),
+        'm6'  : (minor_sixth, major_third),
+        'M6'  : (major_sixth, minor_third),
+        'm7'  : (minor_seventh, major_second),
+        'M7'  : (major_seventh, minor_second),
+    }
+
+    # Looking up interval in shorthand_lookup and call that function.
+    val = False
+    if shorthand_lookup.has_key(interval):
+        if up:
+            val = shorthand_lookup[interval][0](note)
+        else:
+            val = shorthand_lookup[interval][1](note)
+    else:
+        raise ValueError('Invalid transposition interval "{}"'.format(interval))
+
+    return val
+
 def from_shorthand(note, interval, up=True):
     """Return the note on interval up or down.
 
