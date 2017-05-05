@@ -177,7 +177,7 @@ def perfect_fourth(note):
     frt = fourth(note[0], 'C')
     return augment_or_diminish_until_the_interval_is_right(note, frt, 5)
 
-def minor_fifth(note):
+def diminished_fifth(note):
     fif = fifth(note[0], 'C')
     return augment_or_diminish_until_the_interval_is_right(note, fif, 6)
 

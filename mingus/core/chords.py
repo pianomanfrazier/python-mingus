@@ -209,7 +209,7 @@ def diminished_triad(note):
     >>> diminished_triad('C')
     ['C', 'Eb', 'Gb']
     """
-    return [note, intervals.minor_third(note), intervals.minor_fifth(note)]
+    return [note, intervals.minor_third(note), intervals.diminished_fifth(note)]
 
 def augmented_triad(note):
     """Build an augmented triad on note.
